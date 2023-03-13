@@ -1,4 +1,4 @@
-features/counter/counterSlice.js
+
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
@@ -6,11 +6,14 @@ const initialState = {
 }
 
 export const TrackSlice = createSlice({
-    name:track,
+    name:'track',
     initialState,
     reducers:{
         getTracks: (state) => {
-            
+            console.log(state)
         }
     }
 })
+
+export const {getTracks} = TrackSlice.actions
+export default TrackSlice.reducer
